@@ -129,10 +129,10 @@
 
         en {
             bindings = <
-  &kp Q               &kp W  &kp E  &kp R                     &kp T                          &kp Y  &kp U    &kp I      &kp O    &kp P
-  &mt LEFT_CONTROL A  &kt S  &kp D  &kt F                     &kp G                          &kp H  &kp J    &kp K      &kp L    &hmr LEFT_CONTROL SEMICOLON
-  &mt LEFT_SHIFT Z    &kp X  &kp C  &kp V                     &kp B                          &kp N  &kp M    &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
-                                    &mt LEFT_COMMAND LG(DEL)  &mo 4  &kp SPACE    &kp ENTER  &mo 2  &kp TAB
+  &kp Q               &kp W  &kp E  &kp R             &kp T                                                               &kp Y        &kp U             &kp I      &kp O    &kp P
+  &mt LEFT_CONTROL A  &kt S  &kp D  &kt F             &kp G                                                               &kp H        &kp J             &kp K      &kp L    &hmr LEFT_CONTROL SEMICOLON
+  &mt LEFT_SHIFT Z    &kp X  &kp C  &kp V             &kp B                                                               &kp N        &kp M             &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
+                                    &mt LEFT_ALT TAB  &lt 2 SPACE  &mt LEFT_COMMAND DELETE    &mt LEFT_COMMAND BACKSPACE  &lt 4 ENTER  &mt LEFT_ALT ESC
             >;
 
             display-name = "Base";
@@ -140,10 +140,10 @@
 
         ru {
             bindings = <
-  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE
-  &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LSHFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &hmr RCTRL RU_CYRILLIC_O   &hmr RSHFT RU_CYRILLIC_EL  &hmr LALT RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
-  &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
-                                                                                   &kp BACKSPACE             &mo 4               &kp SPACE    &kp ENTER  &mo 3               &kp TAB
+  &kp RU_CYRILLIC_SHORT_I          &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                                         &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE
+  &mt LEFT_CONTROL RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                                         &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &mt LEFT_CONTROL RU_CYRILLIC_ZHE
+  &mt LEFT_SHIFT RU_CYRILLIC_YA    &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                                                          &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &mt LEFT_SHIFT RU_CYRILLIC_E
+                                                                             &mt LEFT_ALT TAB    &lt 3 SPACE         &mt LEFT_COMMAND DELETE    &mt LEFT_COMMAND BACKSPACE  &lt 4 ENTER         &mt LEFT_ALT ESC
             >;
 
             display-name = "Ru";
@@ -151,10 +151,10 @@
 
         sym_en {
             bindings = <
-  &kp TILDE       &kp LT          &kp EQUAL         &kp GT           &kp GRAVE                    &kp CARET  &kp LBKT         &kp UNDER        &kp RBKT        &kp DLLR
-  &hml LGUI BSLH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &hmr RCTRL LBRC  &hmr RSHFT SEMI  &hmr LALT RBRC  &hmr RGUI EXCL
-  &kp HASH        &kp STAR        &kp COLON         &kp FSLH         &kp AMPS                     &kp AT     &kp PIPE         &kp COMMA        &kp DOT         &kp QMARK
-                                                    &trans           &mo 5      &trans    &trans  &none      &trans
+  &kp TILDE      &kp PRCNT  &kp CARET  &kp GRAVE   &kp LBRC                       &kp RBRC  &kp EQUAL  &kp UNDER  &kp AMPS   &kp STAR
+  &kp EXCL       &kp AT     &kp HASH   &kp DOLLAR  &kp LPAR                       &kp RPAR  &kp PLUS   &kp MINUS  &kp COLON  &kp SEMI
+  &kp BACKSLASH  &kp LT     &kp GT     &kp DQT     &kp LBKT                       &kp RBKT  &kp SQT    &kp COMMA  &kp DOT    &kp QMARK
+                                       &trans      &trans    &trans    &kp SLASH  &mo 5     &kp PIPE
             >;
 
             display-name = "Symbols";
@@ -162,10 +162,10 @@
 
         sym_ru {
             bindings = <
-  &en TILDE               &en LT          &kp EQUAL         &en GT           &en GRAVE                    &en CARET  &en LBKT  &kp UNDER           &en RBKT    &en DLLR
-  &hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &en LBRC  &hmr RSHFT RU_SEMI  &en RBRC    &hmr RGUI EXCL
-  &en HASH                &kp STAR        &kp RU_COLON      &kp RU_FSLH      &en AMPS                     &en AT     &en PIPE  &kp RU_COMMA        &kp RU_DOT  &kp RU_QMARK
-                                                            &trans           &mo 5      &trans    &trans  &none      &trans
+  &en TILDE    &en RU_PRCNT  &kp CARET  &en GRAVE   &en LBRC                          &en RBRC     &en EQUAL    &kp UNDER     &en AMPS      &en RU_ASTRK
+  &kp RU_EXCL  &kp AT        &kp HASH   &kp DOLLAR  &kp RU_LPAR                       &kp RU_RPAR  &en RU_PLUS  &kp MINUS     &kp RU_COLON  &kp RU_SEMI
+  &en RU_BSLH  &kp LT        &kp GT     &kp RU_DQT  &en LBKT                          &en RBKT     &en SQT      &kp RU_COMMA  &kp RU_DOT    &kp RU_QMARK
+                                        &trans      &trans       &trans    &kp SLASH  &mo 5        &kp PIPE
             >;
 
             display-name = "Symbols";
