@@ -72,7 +72,7 @@
         to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N2))>;
+            bindings = <&kp LC(SPACE)>;
             label = "TO_RU";
             wait-ms = <0>;
             tap-ms = <30>;
@@ -81,7 +81,7 @@
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N1))>;
+            bindings = <&kp LC(SPACE)>;
             label = "TO_EN";
             wait-ms = <0>;
             tap-ms = <30>;
@@ -122,6 +122,13 @@
             wait-ms = <0>;
             tap-ms = <30>;
         };
+
+        lg_tog: lg_tog {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &tog 1>;
+            label = "LG_TOG";
+        };
     };
 
     keymap {
@@ -130,7 +137,7 @@
         en {
             bindings = <
   &kp Q               &kp W  &kp E  &kp R             &kp T                                                               &kp Y        &kp U             &kp I      &kp O    &kp P
-  &mt LEFT_CONTROL A  &kt S  &kp D  &kt F             &kp G                                                               &kp H        &kp J             &kp K      &kp L    &hmr LEFT_CONTROL SEMICOLON
+  &mt LEFT_CONTROL A  &kt S  &kp D  &kt F             &kp G                                                               &kp H        &kp J             &kp K      &kp L    &mt LEFT_CONTROL SEMICOLON
   &mt LEFT_SHIFT Z    &kp X  &kp C  &kp V             &kp B                                                               &kp N        &kp M             &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
                                     &mt LEFT_ALT TAB  &lt 2 SPACE  &mt LEFT_COMMAND DELETE    &mt LEFT_COMMAND BACKSPACE  &lt 4 ENTER  &mt LEFT_ALT ESC
             >;
@@ -154,7 +161,7 @@
   &kp TILDE      &kp PRCNT  &kp CARET  &kp GRAVE   &kp LBRC                       &kp RBRC  &kp EQUAL  &kp UNDER  &kp AMPS   &kp STAR
   &kp EXCL       &kp AT     &kp HASH   &kp DOLLAR  &kp LPAR                       &kp RPAR  &kp PLUS   &kp MINUS  &kp COLON  &kp SEMI
   &kp BACKSLASH  &kp LT     &kp GT     &kp DQT     &kp LBKT                       &kp RBKT  &kp SQT    &kp COMMA  &kp DOT    &kp QMARK
-                                       &trans      &trans    &trans    &kp SLASH  &mo 5     &kp PIPE
+                                       &trans      &trans    &trans    &layer_ru  &mo 5     &kp SLASH
             >;
 
             display-name = "Symbols";
@@ -162,10 +169,10 @@
 
         sym_ru {
             bindings = <
-  &en TILDE    &en RU_PRCNT  &kp CARET  &en GRAVE   &en LBRC                          &en RBRC     &en EQUAL    &kp UNDER     &en AMPS      &en RU_ASTRK
-  &kp RU_EXCL  &kp AT        &kp HASH   &kp DOLLAR  &kp RU_LPAR                       &kp RU_RPAR  &en RU_PLUS  &kp MINUS     &kp RU_COLON  &kp RU_SEMI
-  &en RU_BSLH  &kp LT        &kp GT     &kp RU_DQT  &en LBKT                          &en RBKT     &en SQT      &kp RU_COMMA  &kp RU_DOT    &kp RU_QMARK
-                                        &trans      &trans       &trans    &kp SLASH  &mo 5        &kp PIPE
+  &en TILDE    &en RU_PRCNT  &kp CARET  &en GRAVE   &en LBRC                      &en RBRC     &en EQUAL    &kp UNDER     &en AMPS      &en RU_ASTRK
+  &kp RU_EXCL  &kp AT        &kp HASH   &kp DOLLAR  &kp RU_LPAR                   &kp RU_RPAR  &en RU_PLUS  &kp MINUS     &kp RU_COLON  &kp RU_SEMI
+  &en RU_BSLH  &kp LT        &kp GT     &kp RU_DQT  &en LBKT                      &en RBKT     &en SQT      &kp RU_COMMA  &kp RU_DOT    &kp RU_QMARK
+                                        &trans      &trans       &trans    &none  &mo 5        &kp PIPE
             >;
 
             display-name = "Symbols";
@@ -173,10 +180,10 @@
 
         nav {
             bindings = <
-  &kp N1            &kp N2  &kp N3        &kp N4         &kp N5                    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-  &kp LEFT_CONTROL  &none   &kp LA(LEFT)  &kp LA(RIGHT)  &none                     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_CONTROL
-  &layer_en         &none   &none         &none          &none                     &none     &none     &none   &none      &layer_ru
-                                          &trans         &mo 5   &trans    &trans  &trans    &trans
+  &kp N1            &kp N2  &kp N3        &kp N4         &kp N5                       &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
+  &kp LEFT_CONTROL  &none   &kp LA(LEFT)  &kp LA(RIGHT)  &none                        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_CONTROL
+  &layer_en         &none   &none         &none          &none                        &none     &none     &none   &none      &layer_ru
+                                          &trans         &mo 5   &layer_en    &trans  &trans    &trans
             >;
 
             display-name = "Nav";
