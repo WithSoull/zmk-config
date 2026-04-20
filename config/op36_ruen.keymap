@@ -54,6 +54,30 @@
             key-positions = <8 9>;
             layers = <1>;
         };
+
+        x {
+            bindings = <&kp RU_CYRILLIC_HA>;
+            key-positions = <29 28>;
+            layers = <1>;
+        };
+
+        backslash_en {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <29 28>;
+            layers = <2>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <18 19>;
+            layers = <2 3>;
+        };
+
+        backslash_ru {
+            bindings = <&kp RU_BACKSLASH>;
+            key-positions = <29 28>;
+            layers = <3>;
+        };
     };
 
     macros {
@@ -153,24 +177,24 @@
 
         sym_en {
             bindings = <
-  &kp TILDE      &kp PRCNT  &kp CARET  &kp GRAVE   &kp LBRC                          &kp RBRC  &kp EQUAL  &kp UNDER  &kp AMPS   &kp STAR
-  &kp EXCL       &kp AT     &kp HASH   &kp DOLLAR  &kp LPAR                          &kp RPAR  &kp PLUS   &kp MINUS  &kp COLON  &kp SEMI
-  &kp BACKSLASH  &kp LT     &kp GT     &kp DQT     &kp LBKT                          &kp RBKT  &kp SQT    &kp COMMA  &kp DOT    &kp QMARK
-                                       &trans      &trans    &print_en    &layer_ru  &mo 5     &kp SLASH
+  &kp TILDE  &kp PRCNT  &kp CARET  &kp GRAVE   &kp LBRC                          &kp RBRC  &kp EQUAL  &kp UNDER  &kp AMPS   &kp STAR
+  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR  &kp LPAR                          &kp RPAR  &kp PLUS   &kp MINUS  &kp COLON  &kp SEMI
+  &kp SLASH  &kp LT     &kp GT     &kp DQT     &kp LBKT                          &kp RBKT  &kp SQT    &kp COMMA  &kp DOT    &kp QMARK
+                                   &trans      &trans    &print_en    &layer_ru  &mo 5     &none
             >;
 
-            display-name = "Symbols";
+            display-name = "Symbols_en";
         };
 
         sym_ru {
             bindings = <
-  &en TILDE    &en RU_PRCNT  &kp CARET  &en GRAVE   &en LBRC                         &en RBRC     &en EQUAL    &kp UNDER     &en AMPS      &en RU_ASTRK
-  &kp RU_EXCL  &kp AT        &kp HASH   &kp DOLLAR  &kp RU_LPAR                      &kp RU_RPAR  &en RU_PLUS  &kp MINUS     &kp RU_COLON  &kp RU_SEMI
-  &en RU_BSLH  &kp LT        &kp GT     &kp RU_DQT  &en LBKT                         &en RBKT     &en SQT      &kp RU_COMMA  &kp RU_DOT    &kp RU_QMARK
-                                        &trans      &trans       &print_ru    &none  &mo 5        &kp PIPE
+  &en TILDE     &kp RU_PRCNT  &en CARET  &en GRAVE   &en LBRC                         &en RBRC     &kp EQUAL    &kp UNDER     &en AMPS      &kp RU_ASTRK
+  &kp RU_EXCL   &kp AT        &en HASH   &en DOLLAR  &kp RU_LPAR                      &kp RU_RPAR  &kp RU_PLUS  &kp MINUS     &kp RU_COLON  &kp RU_SEMI
+  &kp RU_SLASH  &en LT        &en GT     &kp RU_DQT  &en LBKT                         &en RBKT     &en SQT      &kp RU_COMMA  &kp RU_DOT    &kp RU_QMARK
+                                         &trans      &trans       &print_ru    &none  &mo 5        &none
             >;
 
-            display-name = "Symbols";
+            display-name = "Symbols_ru";
         };
 
         nav {
