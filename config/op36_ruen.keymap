@@ -195,7 +195,7 @@
         sym_ru {
             bindings = <
   &en TILDE     &kp RU_PRCNT  &en CARET  &en GRAVE   &en LBRC                         &en RBRC     &kp EQUAL    &kp UNDER     &en AMPS      &kp RU_ASTRK
-  &kp RU_EXCL   &kp AT        &en HASH   &en DOLLAR  &kp RU_LPAR                      &kp RU_RPAR  &kp RU_PLUS  &kp MINUS     &kp RU_COLON  &kp RU_SEMI
+  &kp RU_EXCL   &en AT        &en HASH   &en DOLLAR  &kp RU_LPAR                      &kp RU_RPAR  &kp RU_PLUS  &kp MINUS     &kp RU_COLON  &kp RU_SEMI
   &kp RU_SLASH  &en LT        &en GT     &kp RU_DQT  &en LBKT                         &en RBKT     &en SQT      &kp RU_COMMA  &kp RU_DOT    &kp RU_QMARK
                                          &trans      &trans       &print_ru    &none  &mo 5        &none
             >;
